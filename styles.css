@@ -1,8 +1,13 @@
 :root {
-    --main-color: #00bfff;
-    --secondary-color: #554739;
+    --secondary-color: #00bfff;
+    --main-color: #554739;
     --nav-bar-height: 5rem;
     --text-color: hsl(0, 0%, 90%);
+    --main-color2: hsl(30, 50%, 35%);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -17,6 +22,7 @@ body {
     font-size: 62.5%;
     color: var(--text-color);
     font-family: Inter, sans-serif;
+    scroll-snap-type: y mandatory;
 }
 
 .nav {
@@ -24,7 +30,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -33,14 +39,14 @@ body {
 
 .nav-list {
     display: flex;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
 }
 
 .nav-list a {
     display: block;
     font-size: 1.5rem;
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--main-color);
     font-weight: 500;
     padding: 1.5rem;
 }
@@ -59,15 +65,19 @@ ul {
     list-style: none;
 }
 
+section {
+    scroll-snap-align: start;
+}
+
 .main {
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
     background-image: radial-gradient(
-    circle farthest-corner at bottom left,  
-    rgba(0, 0, 0, .8) 0%,
-    rgba(0, 0, 0, .9) 100%
+        circle farthest-corner at bottom left,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.9) 100%
     );
     display: flex;
     justify-content: center;
@@ -82,6 +92,37 @@ ul {
 .name-thing {
     font-family: "Fira Code", Roboto, sans-serif;
     font-size: 1.5rem;
-    color: var(--main-color);
+    color: var(--secondary-color);
     margin-top: 1rem;
+}
+
+#projects {
+    background-image: linear-gradient(
+        -135deg,
+        hsl(345, 100%, 15%),
+        hsl(195, 33%, 35%)
+    );
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.projects-header {
+    font-size: 2.7rem;
+    position: relative;
+}
+
+.projects-header::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
 }
