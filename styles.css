@@ -112,6 +112,32 @@ section {
     padding-top: 5rem;
 }
 
+.projects-img-wrapper {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-name {
+    margin: 0;
+    margin-top: -2px;
+    padding: 0;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    width: 100%;
+}
+
+img {
+    margin: 0;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    max-width: 300px;
+}
+
 .projects-header {
     font-size: 2.7rem;
     position: relative;
@@ -120,7 +146,7 @@ section {
 .projects-header::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: -6px;
     left: 0;
     width: 100%;
     height: 3px;
