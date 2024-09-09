@@ -1,0 +1,87 @@
+:root {
+    --main-color: #00bfff;
+    --secondary-color: #554739;
+    --nav-bar-height: 5rem;
+    --text-color: hsl(0, 0%, 90%);
+}
+
+* {
+    /* border: 1px solid tomato; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    color: var(--text-color);
+    font-family: Inter, sans-serif;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10000;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.nav-list a {
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    padding: 1.5rem;
+}
+
+.nav a:hover {
+    background-color: #554739;
+    color: var(--text-color);
+}
+
+li {
+    list-style-type: none;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: radial-gradient(
+    circle farthest-corner at bottom left,  
+    rgba(0, 0, 0, .8) 0%,
+    rgba(0, 0, 0, .9) 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-text {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.name-thing {
+    font-family: "Fira Code", Roboto, sans-serif;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-top: 1rem;
+}
