@@ -60,7 +60,7 @@ body {
 }
 
 .nav a:hover {
-    background-color: #554739;
+    background-color: hsl(0, 0%, 20%);
     color: var(--text-color);
 }
 
@@ -160,7 +160,7 @@ section {
     -webkit-backdrop-filter: blur(5.4px);
 }
 
-.project-tile a {
+a {
     text-decoration: none;
     color: var(--text-color);
 }
@@ -188,6 +188,8 @@ section {
 .projects-header {
     font-size: 2.7rem;
     position: relative;
+    text-align: center;
+    margin: 0 3rem;
 }
 
 .projects-header::after {
@@ -214,4 +216,47 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.contacts {
+    max-width: 70%;
+    width: 600px;
+}
+
+#contact-header {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.7rem;
+    margin-top: 2.5rem;
+}
+
+.link {
+    transition: all 300ms ease-out;
+    text-align: center;
+    transition-property: transform;
+}
+
+.fa-brands {
+    margin-right: 10px;
+}
+
+.link:hover {
+    transform: translateY(5px);
+}
+
+@media only screen and (max-width: 480px) {
+    .links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .link:hover {
+        transform: scale(110%);
+    }
 }
